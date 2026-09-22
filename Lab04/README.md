@@ -55,28 +55,28 @@ Chương trình Console C# quản lý danh sách sản phẩm. Dữ liệu đư�
 ## Hình ảnh màn hình
 
 ### Menu chương trình
-![Menu](screenshots/menu.png)
+![Menu](Screenshots/menu.png)
 
 ### Thêm sản phẩm (kèm event thông báo)
-![Them san pham](screenshots/them_san_pham.png)
+![Them san pham](Screenshots/them_san_pham.png)
 
 ### Xuất danh sách
-![Xuat danh sach](screenshots/xuat_danh_sach.png)
+![Xuat danh sach](Screenshots/xuat_danh_sach.png)
 
 ### Tìm theo mã
-![Tim theo ma](screenshots/tim_theo_ma.png)
+![Tim theo ma](Screenshots/tim_theo_ma.png)
 
 ### Tìm theo tên
-![Tim theo ten](screenshots/tim_theo_ten.png)
+![Tim theo ten](Screenshots/tim_theo_ten.png)
 
 ### Lọc theo khoảng giá
-![Loc theo khoang gia](screenshots/loc_theo_khoang_gia.png)
+![Loc theo khoang gia](Screenshots/loc_theo_khoang_gia.png)
 
 ### Xóa sản phẩm (kèm event thông báo)
-![Xoa san pham](screenshots/xoa_san_pham.png)
+![Xoa san pham](Screenshots/xoa_san_pham.png)
 
 ### Tính tổng giá trị kho
-![Tinh tong gia tri kho](screenshots/tinh_tong_gia_tri_kho.png)
+![Tinh tong gia tri kho](Screenshots/tinh_tong_gia_tri_kho.png)
 
 ### Xử lý nhập sai (mã trùng, đơn giá/số lượng âm, mã không tồn tại)
-![Xu ly loi](screenshots/xu_ly_loi_nhap_lieu.png)
+![Xu ly loi](Screenshots/xu_ly_loi_nhap_lieu.png)
