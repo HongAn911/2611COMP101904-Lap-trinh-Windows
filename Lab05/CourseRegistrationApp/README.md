@@ -1,25 +1,39 @@
-﻿# Lab 05 - Ứng dụng đăng ký khóa học (CourseRegistrationApp)
+# Lab 05 - Windows Forms cơ bản: Ứng dụng đăng ký khóa học
+
 ## Thông tin sinh viên
 - Họ tên: Huỳnh Thị Hồng Ân
 - MSSV: 49.01.103.006
 - Lớp: 49.01.SPTIN.A
-## Mô tả
-Ứng dụng WinForms cho phép đăng ký khóa học gồm: thông tin học viên (họ tên, số điện thoại, ngày sinh, nhận email) và thông tin khóa học (khóa học, hình thức học, số tháng đăng ký). Ứng dụng tự động tính tổng học phí và hiển thị phiếu đăng ký bằng MessageBox. Dữ liệu chỉ xử lý trên Form, không lưu cơ sở dữ liệu.
+- Học phần: COMP1019 - Lập trình trên Windows
 
-## Chức năng
-- Nhập họ tên, số điện thoại, chọn ngày sinh.
-- Chọn nhận email thông báo (CheckBox).
-- Chọn khóa học từ danh sách có sẵn (ComboBox).
-- Chọn hình thức học: Online / Trực tiếp (RadioButton).
-- Chọn số tháng đăng ký từ 1 đến 12 (NumericUpDown).
-- Tự động tính lại tổng học phí khi thay đổi khóa học hoặc số tháng.
-- Kiểm tra dữ liệu nhập (họ tên, số điện thoại, khóa học) trước khi đăng ký.
-- Hiển thị phiếu đăng ký bằng MessageBox.
-- Làm mới dữ liệu trên form.
-- Thoát chương trình có hộp thoại xác nhận.
+## Mô tả
+Ứng dụng WinForms (C#, .NET 8) dùng để đăng ký khóa học. Người dùng nhập thông tin học viên, chọn khóa học, hình thức học và số tháng; tổng học phí được tính tự động và phiếu đăng ký hiển thị bằng MessageBox. Dữ liệu chỉ xử lý trên Form, không lưu cơ sở dữ liệu.
+
+## Cấu trúc project
+| File | Nội dung |
+|---|---|
+| `Lab05/Program.cs` | Điểm khởi chạy ứng dụng |
+| `Lab05/KhoaHocInfo.cs` | Record lưu tên khóa học và học phí mỗi tháng |
+| `Lab05/FrmDangKyKhoaHoc.cs` | Xử lý sự kiện và logic |
+| `Lab05/FrmDangKyKhoaHoc.Designer.cs` | Giao diện Form |
+
+## Danh sách control
+| Nhóm | Control | Tên control | Ghi chú |
+|---|---|---|---|
+| Thông tin học viên (`grpHocVien`) | TextBox | `txtHoTen` | Nhập họ tên |
+| | TextBox | `txtSoDienThoai` | Nhập số điện thoại |
+| | DateTimePicker | `dtpNgaySinh` | Chọn ngày sinh |
+| | CheckBox | `chkNhanEmail` | Nhận email thông báo |
+| Thông tin khóa học (`grpKhoaHoc`) | ComboBox | `cboKhoaHoc` | Chọn khóa học |
+| | RadioButton | `radOnline` | Hình thức online |
+| | RadioButton | `radOffline` | Hình thức trực tiếp |
+| | NumericUpDown | `numSoThang` | Số tháng (1 - 12) |
+| | Label | `lblTongTien` | Tổng học phí |
+| Nút lệnh | Button | `btnDangKy` | Đăng ký |
+| | Button | `btnLamMoi` | Làm mới |
+| | Button | `btnThoat` | Thoát |
 
 ## Dữ liệu khóa học
-
 | Khóa học | Học phí/tháng |
 |---|---|
 | C# WinForms cơ bản | 800.000 VNĐ |
@@ -27,33 +41,18 @@
 | Web Frontend cơ bản | 750.000 VNĐ |
 | Lập trình Python cơ bản | 650.000 VNĐ |
 
-**Công thức:** Tổng học phí = Học phí một tháng × Số tháng đăng ký.
+Công thức: Tổng học phí = Học phí một tháng × Số tháng.
 
-## Danh sách control chính
-
-| Nhóm | Control | Tên control | Ghi chú |
-|---|---|---|---|
-| Thông tin học viên | TextBox | `txtHoTen` | Nhập họ tên học viên |
-| Thông tin học viên | TextBox | `txtSoDienThoai` | Nhập số điện thoại |
-| Thông tin học viên | DateTimePicker | `dtpNgaySinh` | Chọn ngày sinh |
-| Thông tin học viên | CheckBox | `chkNhanEmail` | Nhận email thông báo |
-| Thông tin khóa học | ComboBox | `cboKhoaHoc` | Chọn khóa học |
-| Thông tin khóa học | RadioButton | `radOnline` | Hình thức online |
-| Thông tin khóa học | RadioButton | `radOffline` | Hình thức trực tiếp |
-| Thông tin khóa học | NumericUpDown | `numSoThang` | Số tháng đăng ký |
-| Thông tin khóa học | Label | `lblTongTien` | Hiển thị tổng học phí |
-| Nút lệnh | Button | `btnDangKy` | Xử lý đăng ký |
-| Nút lệnh | Button | `btnLamMoi` | Xóa dữ liệu |
-| Nút lệnh | Button | `btnThoat` | Thoát chương trình |
-
-## Công nghệ sử dụng
-- C# WinForms
-- .NET 8
+## Chức năng
+- Form Load: nạp khóa học, để trống ô khóa học (chưa chọn khóa nào), chọn mặc định hình thức Online, số tháng từ 1 đến 12, hiển thị học phí ban đầu.
+- Tự tính lại học phí khi đổi khóa học hoặc số tháng.
+- Đăng ký: kiểm tra họ tên, số điện thoại, khóa học rồi hiển thị phiếu đăng ký.
+- Làm mới: đưa toàn bộ dữ liệu về mặc định (bỏ chọn khóa học), con trỏ về ô họ tên.
+- Thoát: hỏi xác nhận, chọn Yes mới đóng Form.
 
 ## Cách chạy
-1. Mở file `Lab05_CourseRegistrationApp/CourseRegistrationApp.sln` bằng Visual Studio.
-2. Build solution.
-3. Nhấn F5 để chạy chương trình.
+1. Mở `Lab05.sln` bằng Visual Studio 2022.
+2. Build solution rồi nhấn F5.
 
 ## Hình ảnh minh họa
 
