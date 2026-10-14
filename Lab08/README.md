@@ -19,7 +19,7 @@
 
 **Cách 2: dùng dòng lệnh**
 ```bash
-cd COMP1019_Lab08_SimplePaint
+cd Lab08_SimplePaint
 dotnet run
 ```
 
