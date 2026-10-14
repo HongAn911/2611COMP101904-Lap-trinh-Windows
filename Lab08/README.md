@@ -14,7 +14,7 @@
 
 **Cách 1: dùng Visual Studio**
 1. Clone hoặc tải repo về máy.
-2. Mở file `COMP1019_Lab08_SimplePaint.sln` (hoặc `COMP1019_Lab08_SimplePaint.csproj`) bằng Visual Studio.
+2. Mở file `Lab08_SimplePaint.sln` (hoặc `Lab08_SimplePaint.csproj`) bằng Visual Studio.
 3. Nhấn **F5** để chạy.
 
 **Cách 2: dùng dòng lệnh**
