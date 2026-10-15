@@ -256,7 +256,7 @@ Cách thử: chạy chương trình, làm theo các bước, ghi kết quả (Pa
 | TC12 | Print Preview | Nhập đủ dữ liệu, bấm *Xem trước in* | Mở `PrintPreviewDialog`, thẻ có khung, tiêu đề, ảnh, thông tin; ảnh không méo | | ![TC12](screenshots/12_print_preview.png) |
 | TC13 | In thẻ | Nhập đủ dữ liệu, bấm *In thẻ*, chọn *Microsoft Print to PDF* | ![TC13 PDF](screenshots/13_the_sau_khi_in.png) |
 | TC14 | Hủy in | Bấm *In thẻ* rồi *Cancel* trong `PrintDialog` | Không in, không lỗi | | Không cần ảnh |
-| TC15 | Làm mới | Nhập đủ dữ liệu và ảnh, bấm *Làm mới* | Ô nhập trống, combobox về mặc định, `PictureBox` trống, Panel về khung nhắc nhập | | ![TC16](screenshots/15_lam_moi.png) |
+| TC15 | Làm mới | Nhập đủ dữ liệu và ảnh, bấm *Làm mới* | Ô nhập trống, combobox về mặc định, `PictureBox` trống, Panel về khung nhắc nhập | | ![TC15](screenshots/15_lam_moi.png) |
 | TC16 | Thoát | Bấm *Thoát* | Chương trình đóng | | Không cần ảnh |
 
 ## Lỗi thường gặp và cách xử lý
