@@ -243,23 +243,21 @@ Cách thử: chạy chương trình, làm theo các bước, ghi kết quả (Pa
 | STT | Chức năng | Các bước thực hiện | Kết quả mong đợi | Kết quả | Minh chứng |
 | --- | --- | --- | --- | --- | --- |
 | TC01 | Khởi động | Chạy chương trình | Hiển thị đủ các nhóm nhập liệu, nút bấm; ô Mã SV, Họ tên trống; chưa có ảnh; Panel hiện khung nhắc nhập; dòng trạng thái "Còn thiếu: Mã sinh viên, Họ tên, Ảnh đại diện" | | ![TC01](screenshots/01_giao_dien_chinh.png) |
-| TC02 | Chọn ảnh JPG | Bấm *Chọn ảnh...*, chọn file `.jpg` | Ảnh hiện đúng tỉ lệ trong `PictureBox`; hộp thoại chỉ liệt kê JPG/JPEG/PNG/BMP | | ![TC02](screenshots/02_chon_anh_jpg.png) |
-| TC03 | Ảnh ngang / vuông | Chọn lần lượt ảnh ngang `.png` và ảnh vuông `.bmp` | Ảnh luôn giữ đúng tỉ lệ, không bị kéo giãn | | ![TC03](screenshots/03_anh_ngang_vuong.png) |
-| TC04 | Đổi ảnh không khóa file | Chọn ảnh A, rồi ảnh B; đổi tên hoặc xóa ảnh A trong File Explorer khi chương trình đang mở | Không lỗi khi đổi ảnh; file A đổi tên/xóa được | | ![TC04](screenshots/04_doi_anh_khong_khoa_file.png) |
-| TC05 | File không hợp lệ | Chọn file văn bản đã đổi đuôi thành `.jpg` | Hiện thông báo "Không thể mở tệp đã chọn…", chương trình không dừng | | ![TC05](screenshots/05_file_khong_hop_le.png) |
-| TC06 | Hủy chọn ảnh | Bấm *Chọn ảnh...* rồi *Cancel* | Không có thay đổi | | Không cần ảnh |
-| TC07 | Preview thẻ | Nhập Mã SV, Họ tên, chọn ảnh, lớp, khoa, khóa, giới tính | Panel vẽ thẻ có khung, tiêu đề, ảnh và thông tin sinh viên; họ tên in HOA | | ![TC07](screenshots/06_preview_the.png) |
-| TC08 | Preview theo thời gian thực | Sửa họ tên, ngày sinh, giới tính, khóa | Thẻ vẽ lại ngay sau mỗi thay đổi, không nháy hình | | ![TC08](screenshots/06_preview_the.png) |
-| TC09 | Họ tên rất dài | Nhập họ tên trên 50 ký tự | Chữ tự thu nhỏ/cắt cho vừa một dòng, không tràn khỏi thẻ | | ![TC09](screenshots/07_ho_ten_dai.png) |
-| TC10 | Thiếu Mã SV | Để trống Mã SV (đã có họ tên và ảnh), bấm *Xem trước in* | Hiện cảnh báo, biểu tượng lỗi ở ô Mã SV, **không** mở Print Preview | | ![TC10](screenshots/08_thieu_ma_sv.png) |
-| TC11 | Thiếu họ tên | Họ tên chỉ nhập dấu cách, bấm *In thẻ* | Coi như rỗng: cảnh báo, không mở hộp thoại in | | ![TC11](screenshots/09_thieu_ho_ten.png) |
-| TC12 | Thiếu ảnh | Nhập đủ Mã SV, Họ tên, chưa chọn ảnh, bấm *Xem trước in* | Cảnh báo "Chưa chọn ảnh đại diện", không xem trước/in | | ![TC12](screenshots/10_thieu_anh.png) |
-| TC13 | Xóa lỗi khi sửa | Sau TC10, nhập Mã SV | Biểu tượng lỗi ở ô Mã SV biến mất ngay | | ![TC13](screenshots/08_thieu_ma_sv.png) |
-| TC14 | Print Preview | Nhập đủ dữ liệu, bấm *Xem trước in* | Mở `PrintPreviewDialog`, thẻ có khung, tiêu đề, ảnh, thông tin; ảnh không méo | | ![TC14](screenshots/11_print_preview.png) |
-| TC15 | In thẻ | Nhập đủ dữ liệu, bấm *In thẻ*, chọn *Microsoft Print to PDF*, OK | Mở `PrintDialog`; file PDF có thẻ kích thước thực ~85,6 × 54 mm, ảnh không méo | | ![TC15](screenshots/12_print_dialog.png) ![TC15 PDF](screenshots/13_the_sau_khi_in.png) |
-| TC16 | Hủy in | Bấm *In thẻ* rồi *Cancel* trong `PrintDialog` | Không in, không lỗi | | Không cần ảnh |
-| TC17 | Làm mới | Nhập đủ dữ liệu và ảnh, bấm *Làm mới* | Ô nhập trống, combobox về mặc định, `PictureBox` trống, Panel về khung nhắc nhập | | ![TC17](screenshots/14_lam_moi.png) |
-| TC18 | Thoát | Bấm *Thoát* | Chương trình đóng | | Không cần ảnh |
+| TC02 | Chọn ảnh JPG | Bấm *Chọn ảnh...*, chọn file `.jpg` | Ảnh hiện đúng tỉ lệ trong `PictureBox`; hộp thoại chỉ liệt kê JPG/JPEG/PNG/BMP | | ![TC02](screenshots/02_chon_anh.png) |
+| TC03 | Đổi ảnh không khóa file | Chọn ảnh A, rồi ảnh B; đổi tên hoặc xóa ảnh A trong File Explorer khi chương trình đang mở | Không lỗi khi đổi ảnh; file A đổi tên/xóa được | | ![TC03](screenshots/03_doi_anh_khong_khoa_file.png) |
+| TC04 | File không hợp lệ | Chọn file văn bản đã đổi đuôi thành `.jpg` | Hiện thông báo "Không thể mở tệp đã chọn…", chương trình không dừng | | ![TC04](screenshots/04_file_khong_hop_le.png) |
+| TC05 | Hủy chọn ảnh | Bấm *Chọn ảnh...* rồi *Cancel* | Không có thay đổi | | Không cần ảnh |
+| TC06 | Preview thẻ | Nhập Mã SV, Họ tên, chọn ảnh, lớp, khoa, khóa, giới tính | Panel vẽ thẻ có khung, tiêu đề, ảnh và thông tin sinh viên; họ tên in HOA | | ![TC06](screenshots/06_preview_the.png) |
+| TC07 | Preview theo thời gian thực | Sửa họ tên, ngày sinh, giới tính, khóa | Thẻ vẽ lại ngay sau mỗi thay đổi, không nháy hình | | ![TC07](screenshots/07_preview_the.png) |
+| TC08 | Họ tên rất dài | Nhập họ tên trên 50 ký tự | Chữ tự thu nhỏ/cắt cho vừa một dòng, không tràn khỏi thẻ | | ![TC08](screenshots/08_ho_ten_dai.png) |
+| TC09 | Thiếu Mã SV | Để trống Mã SV (đã có họ tên và ảnh), bấm *Xem trước in* | Hiện cảnh báo, biểu tượng lỗi ở ô Mã SV, **không** mở Print Preview | | ![TC09](screenshots/09_thieu_ma_sv.png) |
+| TC10 | Thiếu họ tên | Họ tên chỉ nhập dấu cách, bấm *In thẻ* | Coi như rỗng: cảnh báo, không mở hộp thoại in | | ![TC10](screenshots/10_thieu_ho_ten.png) |
+| TC11 | Thiếu ảnh | Nhập đủ Mã SV, Họ tên, chưa chọn ảnh, bấm *Xem trước in* | Cảnh báo "Chưa chọn ảnh đại diện", không xem trước/in | | ![TC11](screenshots/11_thieu_anh.png) |
+| TC12 | Print Preview | Nhập đủ dữ liệu, bấm *Xem trước in* | Mở `PrintPreviewDialog`, thẻ có khung, tiêu đề, ảnh, thông tin; ảnh không méo | | ![TC12](screenshots/12_print_preview.png) |
+| TC13 | In thẻ | Nhập đủ dữ liệu, bấm *In thẻ*, chọn *Microsoft Print to PDF* | ![TC13 PDF](screenshots/13_the_sau_khi_in.png) |
+| TC14 | Hủy in | Bấm *In thẻ* rồi *Cancel* trong `PrintDialog` | Không in, không lỗi | | Không cần ảnh |
+| TC15 | Làm mới | Nhập đủ dữ liệu và ảnh, bấm *Làm mới* | Ô nhập trống, combobox về mặc định, `PictureBox` trống, Panel về khung nhắc nhập | | ![TC16](screenshots/15_lam_moi.png) |
+| TC16 | Thoát | Bấm *Thoát* | Chương trình đóng | | Không cần ảnh |
 
 ## Lỗi thường gặp và cách xử lý
 
