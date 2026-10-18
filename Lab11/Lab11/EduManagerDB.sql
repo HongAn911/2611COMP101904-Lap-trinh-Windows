@@ -1,0 +1,46 @@
+-- COMP1019 - Lab 11: ADO.NET và CRUD với SQL Server
+-- Chạy toàn bộ script này trong SSMS để tạo database + dữ liệu mẫu.
+IF DB_ID('EduManagerDB') IS NULL
+    CREATE DATABASE EduManagerDB;
+GO
+USE EduManagerDB;
+GO
+
+IF OBJECT_ID('SINHVIEN', 'U') IS NOT NULL DROP TABLE SINHVIEN;
+IF OBJECT_ID('LOP', 'U') IS NOT NULL DROP TABLE LOP;
+IF OBJECT_ID('KHOA', 'U') IS NOT NULL DROP TABLE KHOA;
+GO
+
+CREATE TABLE KHOA (
+    MaKhoa  VARCHAR(20)   PRIMARY KEY,
+    TenKhoa NVARCHAR(100) NOT NULL
+);
+
+CREATE TABLE LOP (
+    MaLop  VARCHAR(20)   PRIMARY KEY,
+    TenLop NVARCHAR(100) NOT NULL,
+    MaKhoa VARCHAR(20)   NOT NULL,
+    CONSTRAINT FK_LOP_KHOA FOREIGN KEY (MaKhoa) REFERENCES KHOA(MaKhoa)
+);
+
+CREATE TABLE SINHVIEN (
+    MaSV  VARCHAR(20)   PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    MaLop VARCHAR(20)   NOT NULL,
+    CONSTRAINT FK_SINHVIEN_LOP FOREIGN KEY (MaLop) REFERENCES LOP(MaLop)
+);
+GO
+
+INSERT INTO KHOA(MaKhoa, TenKhoa) VALUES
+('FIT',  N'Khoa Công nghệ Thông tin'),
+('MATH', N'Khoa Toán - Tin học');
+
+INSERT INTO LOP(MaLop, TenLop, MaKhoa) VALUES
+('CNTT01',  N'Công nghệ thông tin 01', 'FIT'),
+('CNTT02',  N'Công nghệ thông tin 02', 'FIT'),
+('SPTIN01', N'Sư phạm Tin học 01',     'MATH');
+
+INSERT INTO SINHVIEN(MaSV, HoTen, MaLop) VALUES
+('SV001', N'Nguyễn Văn An',  'CNTT01'),
+('SV002', N'Trần Thị Bình',  'CNTT01');
+GO
