@@ -157,19 +157,19 @@ bước đó; chỉ khi dữ liệu nhập đã đầy đủ mới truy vấn da
 
 | STT | Chức năng | Dữ liệu / Thao tác | Kết quả mong đợi | Kết quả | Minh chứng |
 |---|---|---|---|---|---|
-| 1 | Load danh sách | Mở Form | Hiển thị danh sách môn học, thanh trạng thái thống kê | ✅ Đạt | [Ảnh 03](#1-giao-diện-chính) |
-| 2 | Thêm hợp lệ | `COMP10026` – Lập trình cơ bản – 3 tín chỉ | "Đã thêm môn học "COMP10026"." | ✅ Đạt | [Ảnh 04](#2-thêm-môn-học) |
-| 3 | Tên rỗng | `COMP1031`, tên để trống | "Tên môn học không được để trống." | ✅ Đạt | [Ảnh 05](#3-validation-tên-môn-học-rỗng) |
-| 4 | Thứ tự kiểm tra | `COMP1019` (đã tồn tại), tên để trống | Báo lỗi tên rỗng trước, chưa kiểm tra trùng mã | ✅ Đạt | [Ảnh 06](#4-thứ-tự-kiểm-tra) |
-| 5 | Trùng mã | `COMP1019` – Lập trình winds | "Mã môn học "COMP1019" đã tồn tại…" | ✅ Đạt | [Ảnh 07](#5-validation-trùng-mã) |
-| 6 | Mã có khoảng trắng | `COMP10 10` – Lập trình PHP | "Mã môn học không được chứa khoảng trắng." | ✅ Đạt | [Ảnh 08](#6-validation-mã-có-khoảng-trắng) |
-| 7 | Chọn dòng | Click dòng `COMP1001` | Dữ liệu hiện lên ô nhập, mã bị khóa, chuyển chế độ Sửa / Xóa | ✅ Đạt | [Ảnh 09](#7-chọn-dòng-trên-datagridview) |
-| 8 | Sửa | `COMP1001`: số tín chỉ 2 → 3 | "Đã cập nhật môn học "COMP1001"." | ✅ Đạt | [Ảnh 10](#8-sửa-môn-học) |
-| 9 | Xóa – xác nhận | Chọn `COMP1017` → Xóa | Hiện hộp hỏi xác nhận Yes/No | ✅ Đạt | [Ảnh 11, 12](#9-xóa-môn-học) |
-| 10 | Xóa – đồng ý | Chọn **Yes** | "Đã xóa môn học "COMP1017"." | ✅ Đạt | [Ảnh 13](#9-xóa-môn-học) |
-| 11 | Tìm theo mã | Từ khóa `MATH` | Hiện 2 môn: MATH1001, MATH1005 | ✅ Đạt | [Ảnh 14](#10-tìm-kiếm-theo-mã) |
-| 12 | Tìm theo tên | Từ khóa `Lập trình` | Hiện 3 môn có tên chứa "Lập trình" | ✅ Đạt | [Ảnh 15](#11-tìm-kiếm-theo-tên) |
-| 13 | Làm mới | Bấm **Làm mới** | Xóa trắng ô nhập, về chế độ Thêm mới, load lại toàn bộ | ✅ Đạt | [Ảnh 03](#1-giao-diện-chính) |
+| 1 | Load danh sách | Mở Form | Hiển thị danh sách môn học, thanh trạng thái thống kê |  |
+| 2 | Thêm hợp lệ | `COMP10026` – Lập trình cơ bản – 3 tín chỉ | |
+| 3 | Tên rỗng | `COMP1031`, tên để trống | "Tên môn học không được để trống." | |
+| 4 | Thứ tự kiểm tra | `COMP1019` (đã tồn tại), tên để trống | Báo lỗi tên rỗng trước, chưa kiểm tra trùng mã |  |
+| 5 | Trùng mã | `COMP1019` – Lập trình winds | "Mã môn học "COMP1019" đã tồn tại…" | |
+| 6 | Mã có khoảng trắng | `COMP10 10` – Lập trình PHP | "Mã môn học không được chứa khoảng trắng." |  |
+| 7 | Chọn dòng | Click dòng `COMP1001` | Dữ liệu hiện lên ô nhập, mã bị khóa, chuyển chế độ Sửa / Xóa |  |
+| 8 | Sửa | `COMP1001`: số tín chỉ 2 → 3 | "Đã cập nhật môn học "COMP1001"." | |
+| 9 | Xóa – xác nhận | Chọn `COMP1017` → Xóa | Hiện hộp hỏi xác nhận Yes/No |  |
+| 10 | Xóa – đồng ý | Chọn **Yes** | "Đã xóa môn học "COMP1017"." | |
+| 11 | Tìm theo mã | Từ khóa `MATH` | Hiện 2 môn: MATH1001, MATH1005 |  |
+| 12 | Tìm theo tên | Từ khóa `Lập trình` | Hiện 3 môn có tên chứa "Lập trình" | |
+| 13 | Làm mới | Bấm **Làm mới** | Xóa trắng ô nhập, về chế độ Thêm mới, load lại toàn bộ |  |
 
 ## ❓ Trả lời câu hỏi
 
