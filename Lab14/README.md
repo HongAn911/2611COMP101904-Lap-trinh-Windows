@@ -209,7 +209,7 @@ Mở Form, danh sách được load từ database; bấm *Làm mới* cũng tr�
 ![Giao diện chính](screenshots/03_giao_dien_chinh.png)
 
 ### 2. Thêm môn học
-![Thêm môn học thành công](docs/screenshots/04_them_thanh_cong.png)
+![Thêm môn học thành công](screenshots/04_them_thanh_cong.png)
 
 ### 3. Validation: tên môn học rỗng
 ![Tên môn học rỗng](screenshots/05_loi_ten_rong.png)
