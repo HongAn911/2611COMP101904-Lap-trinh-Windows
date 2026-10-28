@@ -1,0 +1,9 @@
+﻿BÁO CÁO DANH SÁCH SINH VIÊN
+Ngày xuất: 28/10/2026 08:30
+Đang hiển thị: 4 | Tổng lớp: 4 | Đạt: 3 | Không đạt: 1 | ĐTB: 7.15
+
+Mã SV	Họ tên	Tên lớp	Điểm TB	Kết quả
+SV004	Phạm Thanh Dung	CNTT K47A	9.1	Đạt
+SV001	Nguyễn Văn An	CNTT K47A	8.2	Đạt
+SV002	Trần Thị Bình	CNTT K47A	6.5	Đạt
+SV003	Lê Minh Cường	CNTT K47A	4.8	Không đạt
